@@ -1,0 +1,31 @@
+<div class="container p-10 mb-20">
+    <h2>Book Form</h2>
+    <form [formGroup]="bookForm" (ngSubmit)="onSubmit()">
+      
+  
+      <div class="form-group">
+        <label for="title">Book Name / Title</label>
+        <input type="text" class="form-control" id="title" formControlName="title">
+      </div>
+
+      <div class="form-group">
+        <label for="description">Description</label>
+        <textarea class="form-control" id="description" formControlName="description"></textarea>
+      </div>
+  
+      <div class="form-group">
+        <label for="category">Category</label>
+        <input type="text" class="form-control" id="category" formControlName="category">
+      </div>
+  
+      <div class="form-group">
+        <label for="price">Price</label>
+        <input type="text" class="form-control" id="price" formControlName="price">
+      </div>
+  
+     
+  
+      <button type="submit" class="btn btn-primary mt-3">Save</button>
+    </form>
+  </div>
+  

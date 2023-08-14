@@ -1,0 +1,31 @@
+<div class="container">
+  <div style="display: flex; flex-direction: row; margin-bottom: 30px;">
+  <h2>Books Dashboard</h2>
+  <button class="btn btn-primary mb-3" style="margin-left: auto;" (click)="addBook()">Add New Book</button>
+  </div>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Book Id</th>
+        <th>Book Title</th>
+        <th>Category</th>
+        <th>Description</th>
+        <th>Price</th>
+        <th>Options</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let book of books; let i = index">
+        <td>{{ book.id }}</td>
+        <td>{{ book.title }}</td>
+        <td>{{ book.category }}</td>
+        <td>{{ book.description }}</td>
+        <td>{{ book.price | currency }}</td>
+        <td><div>
+          <button class="btn btn-primary mr-2" (click)="editBook(book)">Edit</button>
+          <button class="btn btn-danger" (click)="deleteBook(book)">Delete</button>
+        </div></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
